@@ -8,6 +8,9 @@ authors = ["Alexander Lozovoy <berpress@gmail.com>"]
 python = "^3.8"
 pre-commit = "^2.15.0"
 flake8 = "^3.9.2"
+pytest = "^6.2.5"
+requests = "^2.26.0"
+Faker = "^8.12.1"
 
 [tool.poetry.dev-dependencies]
 
