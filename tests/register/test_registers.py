@@ -24,6 +24,18 @@ class TestRegisterUser:
         assert response.json().get("uuid")
         assert isinstance(response.json().get("uuid"), int)
 
+    def test_register_user_with_empty_data(self):
+        """
+        1. Try to register user with empty data
+        2. Check that status code is 201
+        3. Check response
+        """
+        url = self.BASE_URL + "/register"
+        data = {"username": None, "password": None}
+        response = requests.post(url=url, json=data)
+        assert response.status_code == 400
+        print(response.text)
+
     # def test_register_user_with_valid_data_2(self, app):
     #     """
     #     1. Try to register user with valid data
