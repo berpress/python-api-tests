@@ -11,6 +11,8 @@ flake8 = "^3.9.2"
 pytest = "^6.2.5"
 requests = "^2.26.0"
 Faker = "^8.12.1"
+cattrs = "^1.8.0"
+attrs = "^21.2.0"
 
 [tool.poetry.dev-dependencies]
 
