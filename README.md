@@ -1,3 +1,4 @@
+[![tests](https://github.com/berpress/python-api-tests/actions/workflows/tests.yml/badge.svg)](https://github.com/berpress/python-api-tests/actions/workflows/tests.yml)
 # Python api tests
 
 This is a tutorial project that shows how to implement api tests in Python
@@ -16,7 +17,7 @@ git: https://github.com/berpress/flask-restful-api
 url: https://stores-tests-api.herokuapp.com
 
 
-###How to start
+### How to start
 
 Use python 3.8 +
 Create and activate virtual environments
@@ -43,7 +44,7 @@ and add pre-commit
 pre-commit install
 ```
 
-###Run all tests
+### Run all tests
 
 ```python
 pytest
