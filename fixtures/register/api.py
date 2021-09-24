@@ -2,6 +2,7 @@ from requests import Response
 
 from fixtures.register.model import RegisterUser
 from fixtures.validator import Validator
+from common.deco import logging as log
 
 
 class Register(Validator):
@@ -10,6 +11,7 @@ class Register(Validator):
 
     POST_REGISTER = "/register"
 
+    @log("Register new user")
     def register(self, data: RegisterUser, type_response=None) -> Response:
         """
         https://app.swaggerhub.com/apis-docs/berpress/flask-rest-api/1.0.0#/register/regUser # noqa

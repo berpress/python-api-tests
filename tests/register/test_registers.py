@@ -8,7 +8,7 @@ class TestRegisterUser:
         1. Try to register user with valid data
         2. Check that status code is 201
         3. Check response
-        #"""
+        """
         data = RegisterUser.random()
         res = app.register.register(data=data, type_response=RegisterUserResponse)
         assert res.status_code == 201

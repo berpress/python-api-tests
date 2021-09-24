@@ -1,12 +1,16 @@
+import logging
+
 import pytest
 
 from fixtures.app import StoreApp
+
+logger = logging.getLogger("api")
 
 
 @pytest.fixture(scope="session")
 def app(request):
     url = request.config.getoption("--api-url")
-    # Todo: Add logger
+    logger.info(f"Start api tests, url is {url}")
     return StoreApp(url)
 
 
