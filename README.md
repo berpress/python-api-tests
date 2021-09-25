@@ -16,6 +16,9 @@ git: https://github.com/berpress/flask-restful-api
 
 url: https://stores-tests-api.herokuapp.com
 
+swagger: https://app.swaggerhub.com/apis/berpress/flask-rest-api/1.0.0
+
+
 
 ### How to start
 
