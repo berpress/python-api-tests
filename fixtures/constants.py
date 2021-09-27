@@ -7,3 +7,4 @@ class ResponseText:
     ERROR_AUTH_TEXT = "Authorization Required"
     MESSAGE_ADD_USER_INFO = "User info created successfully."
     MESSAGE_USER_NOT_FOUND = "User not found"
+    MESSAGE_INFO_NOT_FOUND = "User info not found"

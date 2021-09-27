@@ -1,7 +1,7 @@
 from requests import Response
 
 from fixtures.common_models import MessageResponse
-from fixtures.user_info.model import AddUserInfo
+from fixtures.user_info.model import AddUserInfo, GetUserInfoResponse
 from fixtures.validator import Validator
 from common.deco import logging as log
 
@@ -10,7 +10,8 @@ class UserInfo(Validator):
     def __init__(self, app):
         self.app = app
 
-    POST_ADD = "/user_info/{}"
+    POST_ADD_USER_INFO = "/user_info/{}"
+    GET_ADD_USER_INFO = "/user_info/{}"
 
     @log("Add user info")
     def add_user_info(
@@ -21,8 +22,22 @@ class UserInfo(Validator):
         """
         response = self.app.client.request(
             method="POST",
-            url=f"{self.app.url}{self.POST_ADD.format(uuid)}",
+            url=f"{self.app.url}{self.POST_ADD_USER_INFO.format(uuid)}",
             json=data.to_dict(),
+            headers=header,
+        )
+        return self.structure(response, type_response=type_response)
+
+    @log("Get user info")
+    def get_user_info(
+        self, uuid: int, header=None, type_response=GetUserInfoResponse
+    ) -> Response:
+        """
+        https://app.swaggerhub.com/apis-docs/berpress/flask-rest-api/1.0.0#/userInfo/userInfoGet # noqa
+        """
+        response = self.app.client.request(
+            method="GET",
+            url=f"{self.app.url}{self.POST_ADD_USER_INFO.format(uuid)}",
             headers=header,
         )
         return self.structure(response, type_response=type_response)

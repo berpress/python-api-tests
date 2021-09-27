@@ -5,6 +5,7 @@ import pytest
 from fixtures.app import StoreApp
 from fixtures.common_models import UserStore
 from fixtures.register.model import RegisterUser
+from fixtures.user_info.model import AddUserInfo
 
 logger = logging.getLogger("api")
 
@@ -38,6 +39,20 @@ def auth_user(app, register_user) -> UserStore:
     data = UserStore(**register_user.to_dict())
     data.header = header
     return data
+
+
+@pytest.fixture
+def user_info(app, auth_user) -> UserStore:
+    """
+    Add user info
+    """
+    data = AddUserInfo.random()
+    app.user_info.add_user_info(
+        uuid=auth_user.user_uuid, data=data, header=auth_user.header
+    )
+    data_user = UserStore(**auth_user.to_dict())
+    data_user.user_info = data
+    return data_user
 
 
 def pytest_addoption(parser):

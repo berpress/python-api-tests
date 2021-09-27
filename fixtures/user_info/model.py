@@ -29,3 +29,12 @@ class AddUserInfo(BaseClass):
         return AddUserInfo(
             phone=fake.phone_number(), email=fake.email(), address=address
         )
+
+
+@attr.s
+class GetUserInfoResponse:
+    phone: str = attr.ib(default=None)
+    email: str = attr.ib(default=None)
+    userID: int = attr.ib(default=None)
+    street: str = attr.ib(default=None)
+    city: str = attr.ib(default=None)
