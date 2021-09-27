@@ -3,29 +3,29 @@ from fixtures.constants import ResponseText
 from fixtures.user_info.model import AddUserInfo
 
 
-class TestAddUserInfo:
-    def test_add_user_info(self, app, auth_user):
+class TestUserInfo:
+    def test_update_user_info(self, app, user_info):
         """
-        1. Try to add user info
+        1. Try to update user info
         2. Check that status code is 200
         3. Check response
         """
         data = AddUserInfo.random()
-        res = app.user_info.add_user_info(
-            uuid=auth_user.user_uuid, data=data, header=auth_user.header
+        res = app.user_info.update_user_info(
+            uuid=user_info.user_uuid, data=data, header=user_info.header
         )
         assert res.status_code == 200, "Check status code"
-        assert res.data.message == ResponseText.MESSAGE_ADD_USER_INFO
+        assert res.data.message == ResponseText.MESSAGE_UPDATE_USER_INFO
 
-    def test_add_user_info_wo_auth_header(self, app, auth_user):
+    def test_update_user_info_wo_auth_header(self, app, user_info):
         """
-        1. Try to add user info wo auth header
+        1. Try to update user info wo auth header
         2. Check that status code is 401
         3. Check response
         """
         data = AddUserInfo.random()
-        res = app.user_info.add_user_info(
-            uuid=auth_user.user_uuid,
+        res = app.user_info.update_user_info(
+            uuid=user_info.user_uuid,
             data=data,
             header=None,
             type_response=AuthInvalidResponse,
@@ -35,20 +35,20 @@ class TestAddUserInfo:
         assert res.data.error == ResponseText.ERROR_AUTH_TEXT
         assert res.data.status_code == 401, "Check status code"
 
-    def test_add_user_with_none_exist_user_id(
-        self, app, auth_user, none_exist_user=1000
+    def test_update_user_with_none_exist_user_id(
+        self, app, user_info, none_exist_user=1000
     ):
         """
-        1. Try to add user info with none exist user id
+        1. Try to update user info with none exist user id
         2. Check that status code is 404
         3. Check response
         """
         data = AddUserInfo.random()
-        res = app.user_info.add_user_info(
+        res = app.user_info.update_user_info(
             uuid=none_exist_user,
             data=data,
-            header=auth_user.header,
+            header=user_info.header,
             type_response=MessageResponse,
         )
         assert res.status_code == 404, "Check status code"
-        assert res.data.message == ResponseText.MESSAGE_USER_NOT_FOUND
+        assert res.data.message == ResponseText.MESSAGE_INFO_NOT_FOUND_DOT

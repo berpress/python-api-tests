@@ -2,7 +2,7 @@ from fixtures.common_models import AuthInvalidResponse, MessageResponse
 from fixtures.constants import ResponseText
 
 
-class TestUserInfo:
+class TestGetUserInfo:
     def test_get_user_info(self, app, user_info):
         """
         1. Try to get user info
