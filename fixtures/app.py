@@ -1,3 +1,4 @@
+from fixtures.auth.api import AuthUser
 from fixtures.register.api import Register
 from fixtures.requests import Client
 
@@ -7,3 +8,4 @@ class StoreApp:
         self.url = url
         self.client = Client
         self.register = Register(self)
+        self.auth = AuthUser(self)

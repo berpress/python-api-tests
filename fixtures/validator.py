@@ -19,23 +19,3 @@ class Validator:
             except Exception as e:
                 raise e
         return response
-
-
-# def _get_field_structure(type_response) -> List:
-#     """
-#     Return fields from response type
-#     """
-#     fields = []
-#     for field in type_response.__attrs_attrs__:
-#         fields.append(field.name)
-#     return fields
-#
-#
-# def _get_field_response(response):
-#     """
-#     Return fields from response
-#     """
-#     try:
-#         return list(response.json().keys())
-#     except Exception:
-#         return response.text
