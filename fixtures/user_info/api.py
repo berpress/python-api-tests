@@ -12,6 +12,7 @@ class UserInfo(Validator):
 
     POST_ADD_USER_INFO = "/user_info/{}"
     GET_ADD_USER_INFO = "/user_info/{}"
+    DELETE_USER_INFO = "/user_info/{}"
 
     @log("Add user info")
     def add_user_info(
@@ -38,6 +39,20 @@ class UserInfo(Validator):
         response = self.app.client.request(
             method="GET",
             url=f"{self.app.url}{self.POST_ADD_USER_INFO.format(uuid)}",
+            headers=header,
+        )
+        return self.structure(response, type_response=type_response)
+
+    @log("Delete user info")
+    def delete_user_info(
+        self, uuid: int, header=None, type_response=MessageResponse
+    ) -> Response:
+        """
+        https://app.swaggerhub.com/apis-docs/berpress/flask-rest-api/1.0.0#/userInfo/userInfoDelete # noqa
+        """
+        response = self.app.client.request(
+            method="DELETE",
+            url=f"{self.app.url}{self.DELETE_USER_INFO.format(uuid)}",
             headers=header,
         )
         return self.structure(response, type_response=type_response)

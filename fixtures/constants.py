@@ -8,3 +8,5 @@ class ResponseText:
     MESSAGE_ADD_USER_INFO = "User info created successfully."
     MESSAGE_USER_NOT_FOUND = "User not found"
     MESSAGE_INFO_NOT_FOUND = "User info not found"
+    MESSAGE_INFO_NOT_FOUND_DOT = "User info not found."
+    MESSAGE_DELETE_USER_INFO = "User info deleted."
