@@ -14,7 +14,7 @@ class TestRegisterUser:
         """
         data = RegisterUser.random()
         res = app.register.register(data=data, type_response=RegisterUserResponse)
-        assert res.status_code == 201
+        assert res.status_code == 201, "Check status code"
         assert res.data.message == ResponseText.MESSAGE_REGISTER_USER
 
     @pytest.mark.parametrize("field", ["username", "password"])
@@ -27,5 +27,5 @@ class TestRegisterUser:
         data = RegisterUser.random()
         setattr(data, field, None)
         res = app.register.register(data=data, type_response=MessageResponse)
-        assert res.status_code == 400
+        assert res.status_code == 400, "Check status code"
         assert res.data.message == ResponseText.MESSAGE_USER_PASSWORD_REQUIRED

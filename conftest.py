@@ -27,6 +27,19 @@ def register_user(app) -> UserStore:
     return data
 
 
+@pytest.fixture
+def auth_user(app, register_user) -> UserStore:
+    """
+    Login user
+    """
+    res = app.auth.login(data=register_user.user)
+    token = res.data.access_token
+    header = {"Authorization": f"JWT {token}"}
+    data = UserStore(**register_user.to_dict())
+    data.header = header
+    return data
+
+
 def pytest_addoption(parser):
     parser.addoption(
         "--api-url",

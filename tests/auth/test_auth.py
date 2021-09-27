@@ -1,4 +1,5 @@
-from fixtures.auth.model import Auth, AuthInvalidResponse
+from fixtures.auth.model import Auth
+from fixtures.common_models import AuthInvalidResponse
 from fixtures.constants import ResponseText
 
 
@@ -10,7 +11,7 @@ class TestAuthUser:
         3. Check response
         """
         res = app.auth.login(data=register_user.user)
-        assert res.status_code == 200
+        assert res.status_code == 200, "Check status code"
 
     def test_auth_user_with_random_data(self, app):
         """
@@ -20,7 +21,7 @@ class TestAuthUser:
         """
         data = Auth.random()
         res = app.auth.login(data=data, type_response=AuthInvalidResponse)
-        assert res.status_code == 401
+        assert res.status_code == 401, "Check status code"
         assert res.data.description == ResponseText.DESCRIPTION_AUTH
         assert res.data.error == ResponseText.ERROR_AUTH
         assert res.data.status_code == 401
