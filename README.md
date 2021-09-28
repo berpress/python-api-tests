@@ -52,3 +52,8 @@ pre-commit install
 ```python
 pytest
 ```
+
+Some requests require an authorization token. Use header like
+```angular2html
+"Authorization": "JWT {token}"
+```
