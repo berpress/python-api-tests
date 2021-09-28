@@ -11,3 +11,5 @@ class ResponseText:
     MESSAGE_INFO_NOT_FOUND = "User info not found"
     MESSAGE_INFO_NOT_FOUND_DOT = "User info not found."
     MESSAGE_DELETE_USER_INFO = "User info deleted."
+    MESSAGE_STORE_EXIST = "A store with name '{}' already exists."
+    MESSAGE_STORE_NOT_FOUND = "Store not found"

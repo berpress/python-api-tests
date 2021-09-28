@@ -16,6 +16,7 @@ class UserStore(BaseClass):
     user_uuid: int = attr.ib(default=None)
     header: dict = attr.ib(default=None)
     user_info: AddUserInfo = attr.ib(default=None)
+    store: str = attr.ib(default=None)
 
 
 @attr.s
