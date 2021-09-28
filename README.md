@@ -1,5 +1,6 @@
 [![tests](https://github.com/berpress/python-api-tests/actions/workflows/tests.yml/badge.svg)](https://github.com/berpress/python-api-tests/actions/workflows/tests.yml)
 # Python api tests
+![](images/pytest.png)
 
 This is a tutorial project that shows how to implement api tests in Python
 
