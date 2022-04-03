@@ -2,7 +2,7 @@ from requests import Response
 
 from fixtures.register.model import RegisterUser, RegisterUserResponse
 from fixtures.validator import Validator
-from common.deco import logging as log
+from common.deco import logging as log, swagger
 
 
 class Register(Validator):
@@ -11,6 +11,7 @@ class Register(Validator):
 
     POST_REGISTER = "/register"
 
+    @swagger("regUser")
     @log("Register new user")
     def register(
         self, data: RegisterUser, type_response=RegisterUserResponse

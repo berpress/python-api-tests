@@ -2,6 +2,8 @@ import logging
 
 import pytest
 
+from common.report_html import ReportHtml
+from common.swagger import Swagger
 from fixtures.app import StoreApp
 from fixtures.common_models import UserStore
 from fixtures.register.model import RegisterUser
@@ -12,7 +14,7 @@ logger = logging.getLogger("api")
 
 
 @pytest.fixture(scope="session")
-def app(request):
+def app(request, swagger_checker):
     url = request.config.getoption("--api-url")
     logger.info(f"Start api tests, url is {url}")
     return StoreApp(url)
@@ -73,5 +75,22 @@ def pytest_addoption(parser):
         "--api-url",
         action="store",
         help="enter api url",
-        default="https://stores-tests-api.herokuapp.com",
+        default="https://stores-tests-api.herokuapp.com/",
     ),
+    parser.addoption(
+        "--swagger-url",
+        action="store",
+        help="enter swagger url",
+        default="https://api.swaggerhub.com/apis/berpress/flask-rest-api/1.0.0",
+    ),
+
+
+@pytest.fixture(scope="session")
+def swagger_checker(request):
+    url = request.config.getoption("--swagger-url")
+    url_api = request.config.getoption("--api-url")
+    swagger = Swagger(url)
+    swagger.create_coverage_data()
+    yield
+    report = ReportHtml(api_url=url_api, swagger_url=url, data=swagger.result())
+    report.save_html()

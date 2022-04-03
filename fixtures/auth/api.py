@@ -2,7 +2,7 @@ from requests import Response
 
 from fixtures.auth.model import AuthResponse, Auth
 from fixtures.validator import Validator
-from common.deco import logging as log
+from common.deco import logging as log, swagger
 
 
 class AuthUser(Validator):
@@ -11,6 +11,7 @@ class AuthUser(Validator):
 
     POST_AUTH = "/auth"
 
+    @swagger("authUser")
     @log("Login user")
     def login(self, data: Auth, type_response=AuthResponse) -> Response:
         """

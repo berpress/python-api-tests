@@ -2,7 +2,7 @@ from requests import Response
 
 from fixtures.store.model import StoreResponse
 from fixtures.validator import Validator
-from common.deco import logging as log
+from common.deco import logging as log, swagger
 
 
 class Store(Validator):
@@ -12,6 +12,7 @@ class Store(Validator):
     POST_STORE = "/store/{}"
     GET_STORE = "/store/{}"
 
+    @swagger("storeAdd")
     @log("Add store")
     def add_store(
         self, name: str, header=None, type_response=StoreResponse
@@ -26,6 +27,7 @@ class Store(Validator):
         )
         return self.structure(response, type_response=type_response)
 
+    @swagger("storeGet")
     @log("Get store")
     def get_store(
         self, name: str, header=None, type_response=StoreResponse
