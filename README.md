@@ -58,3 +58,8 @@ Some requests require an authorization token. Use header like
 ```angular2html
 "Authorization": "JWT {token}"
 ```
+
+### Run all tests
+```
+Download the yes common/report to view the API test coverage report
+```
