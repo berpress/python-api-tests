@@ -1,4 +1,5 @@
 from fixtures.auth.api import AuthUser
+from fixtures.items.api import Items
 from fixtures.register.api import Register
 from fixtures.requests import Client
 from fixtures.store.api import Store
@@ -13,3 +14,4 @@ class StoreApp:
         self.auth = AuthUser(self)
         self.user_info = UserInfo(self)
         self.store = Store(self)
+        self.items = Items(self)

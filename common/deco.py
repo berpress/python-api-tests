@@ -4,6 +4,8 @@ import pprint
 from functools import wraps
 from json import JSONDecodeError
 
+from common.swagger import Swagger
+
 logger = logging.getLogger("api")
 
 
@@ -54,6 +56,19 @@ def logging(message):
                 else:
                     log_response += f", body: {res.text}"
                 logger.info(log_response)
+            return res
+
+        return inner
+
+    return wrapper
+
+
+def swagger(key):
+    def wrapper(function):
+        @wraps(function)
+        def inner(*args, **kwargs):
+            res = function(*args, **kwargs)
+            Swagger().swagger_check(key, res)
             return res
 
         return inner

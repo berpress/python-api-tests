@@ -1,0 +1,145 @@
+authUser:
+  description: Auth user
+  method: POST
+  path: /auth
+  statuses:
+  - 200
+  - 401
+  tag: auth
+balanceAdd:
+  description: Add user balance
+  method: POST
+  path: /balance/{userId}
+  statuses:
+  - 200
+  - 400
+  - 401
+  - 403
+  tag: userBalance
+balanceGet:
+  description: Get user balance
+  method: GET
+  path: /balance/{userId}
+  statuses:
+  - 200
+  - 400
+  - 401
+  - 403
+  tag: userBalance
+itemAdd:
+  description: Add new item
+  method: POST
+  path: /item/{nameItem}
+  statuses:
+  - 200
+  - 400
+  - 401
+  - 403
+  tag: storeItem
+itemChange:
+  description: Change item
+  method: PUT
+  path: /item/{nameItem}
+  statuses:
+  - 200
+  - 400
+  - 401
+  - 403
+  tag: storeItem
+itemGet:
+  description: Get item
+  method: GET
+  path: /item/{nameItem}
+  statuses:
+  - 200
+  - 400
+  - 401
+  - 403
+  tag: storeItem
+itemsGet:
+  description: Get all items
+  method: GET
+  path: /items
+  statuses:
+  - 200
+  - 400
+  - 401
+  - 403
+  tag: storeItems
+pay:
+  description: Pay item
+  method: POST
+  path: /pay/{userId}
+  statuses:
+  - 200
+  - 400
+  - 401
+  - 403
+  tag: pay
+regUser:
+  description: Register new user
+  method: POST
+  path: /register
+  statuses:
+  - 200
+  - 400
+  - 401
+  - 403
+  tag: register
+storeAdd:
+  description: Add new store
+  method: POST
+  path: /store/{nameStore}
+  statuses:
+  - 201
+  - 400
+  - 401
+  tag: storeMagazine
+storeGet:
+  description: Get stores
+  method: GET
+  path: /store/{nameStore}
+  statuses:
+  - 200
+  - 401
+  tag: storeMagazine
+userInfoAdd:
+  description: Add user info
+  method: POST
+  path: /user_info/{userId}
+  statuses:
+  - 200
+  - 400
+  - 401
+  - 403
+  tag: userInfo
+userInfoDelete:
+  description: Delete user info
+  method: DELETE
+  path: /user_info/{userId}
+  statuses:
+  - 200
+  - 400
+  - 401
+  - 403
+  tag: userInfo
+userInfoGet:
+  description: Get user info
+  method: GET
+  path: /user_info/{userId}
+  statuses:
+  - 200
+  - 400
+  - 401
+  - 403
+  tag: userInfo
+userInfoUpdate:
+  description: Update user info
+  method: PUT
+  path: /user_info/{userId}
+  statuses:
+  - 200
+  - 400
+  - 401
+  - 403
+  tag: userInfo
