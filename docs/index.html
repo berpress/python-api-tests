@@ -1,0 +1,537 @@
+
+        <html lang="en"> <head> <meta charset="UTF-8">
+            <title>NCPS</title>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" # noqa
+            rel="stylesheet" integrity="sha384 -1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+                </head>
+                    <body>
+
+        <nav class="navbar navbar-dark bg-dark mb-4">
+            <div class="container-md">
+                <a class="navbar-brand" href="#">Swagger coverage</a>
+            </div>
+        </nav>
+        <p class="text-center"">API url: <a href=https://stores-tests-api.herokuapp.com/>https://stores-tests-api.herokuapp.com/</a></p><p class="text-center"">Swagger url: <a href=https://api.swaggerhub.com/apis/berpress/flask-rest-api/1.0.0>https://api.swaggerhub.com/apis/berpress/flask-rest-api/1.0.0</a></p>
+        <div class="container px-5">
+            <div class="row gx-0">
+            <div class="d-flex justify-content-center"><div class="btn-group" role="group" aria-label="Basic mixed styles example"><button type="button" id="all", class="btn btn-primary">All <span class="badge bg-secondary">55</span></button><button type="button" id="success", class="btn btn-success">Checked <span class="badge bg-secondary">8</span></button><button type="button" id="not-checked", class="btn btn-danger">Not checked <span class="badge bg-secondary">47</span></button><button type="button" id="not-added", class="btn btn-warning">Not added <span class="badge bg-secondary">0</span></button></div></div>
+
+            <div class="container px-4 py-1">
+                <div class="row gx-5">
+                    <div class="progress gx-0">
+
+            <div class="progress-bar bg-success px-5"
+                role="progressbar" style="width: 14.5%" aria-valuenow=20 aria-valuemin="0" aria-valuemax="100">14.5%
+            </div>
+
+            <div class="progress-bar bg-danger px-5"
+                role="progressbar" style="width: 85.5%" aria-valuenow=20 aria-valuemin="0" aria-valuemax="100">85.5%
+            </div>
+
+                    </div>
+                </div>
+            </div>
+            <div id=accordions>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="authUser">
+                    <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                        aria-expanded="false" aria-controls="flush-collapseOne"
+                        style="background-color: #60d891;">
+                        <b>Auth user</b> (POST /auth)
+                    </button>
+            </h2>
+        <div class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample" data-state="collapse">
+                <div class="accordion-body"> <section>
+
+                <section>
+                    <p style="color:green;">200</p>
+                </section>
+
+                <section>
+                    <p style="color:green;">401</p>
+                </section>
+             </section>
+        </div>
+            </div>
+                </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="balanceAdd">
+                    <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                        aria-expanded="false" aria-controls="flush-collapseOne"
+                        style="background-color: #F47174;">
+                        <b>Add user balance</b> (POST /balance/{userId})
+                    </button>
+            </h2>
+        <div class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample" data-state="collapse">
+                <div class="accordion-body"> <section>
+
+                <section>
+                    <p style="color:red;">200</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">400</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">401</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">403</p>
+                </section>
+             </section>
+        </div>
+            </div>
+                </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="balanceGet">
+                    <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                        aria-expanded="false" aria-controls="flush-collapseOne"
+                        style="background-color: #F47174;">
+                        <b>Get user balance</b> (GET /balance/{userId})
+                    </button>
+            </h2>
+        <div class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample" data-state="collapse">
+                <div class="accordion-body"> <section>
+
+                <section>
+                    <p style="color:red;">200</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">400</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">401</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">403</p>
+                </section>
+             </section>
+        </div>
+            </div>
+                </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="itemAdd">
+                    <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                        aria-expanded="false" aria-controls="flush-collapseOne"
+                        style="background-color: #F47174;">
+                        <b>Add new item</b> (POST /item/{nameItem})
+                    </button>
+            </h2>
+        <div class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample" data-state="collapse">
+                <div class="accordion-body"> <section>
+
+                <section>
+                    <p style="color:red;">200</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">400</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">401</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">403</p>
+                </section>
+             </section>
+        </div>
+            </div>
+                </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="itemChange">
+                    <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                        aria-expanded="false" aria-controls="flush-collapseOne"
+                        style="background-color: #F47174;">
+                        <b>Change item</b> (PUT /item/{nameItem})
+                    </button>
+            </h2>
+        <div class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample" data-state="collapse">
+                <div class="accordion-body"> <section>
+
+                <section>
+                    <p style="color:red;">200</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">400</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">401</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">403</p>
+                </section>
+             </section>
+        </div>
+            </div>
+                </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="itemGet">
+                    <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                        aria-expanded="false" aria-controls="flush-collapseOne"
+                        style="background-color: #F47174;">
+                        <b>Get item</b> (GET /item/{nameItem})
+                    </button>
+            </h2>
+        <div class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample" data-state="collapse">
+                <div class="accordion-body"> <section>
+
+                <section>
+                    <p style="color:red;">200</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">400</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">401</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">403</p>
+                </section>
+             </section>
+        </div>
+            </div>
+                </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="itemsGet">
+                    <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                        aria-expanded="false" aria-controls="flush-collapseOne"
+                        style="background-color: #F47174;">
+                        <b>Get all items</b> (GET /items)
+                    </button>
+            </h2>
+        <div class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample" data-state="collapse">
+                <div class="accordion-body"> <section>
+
+                <section>
+                    <p style="color:red;">200</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">400</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">401</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">403</p>
+                </section>
+             </section>
+        </div>
+            </div>
+                </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="pay">
+                    <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                        aria-expanded="false" aria-controls="flush-collapseOne"
+                        style="background-color: #F47174;">
+                        <b>Pay item</b> (POST /pay/{userId})
+                    </button>
+            </h2>
+        <div class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample" data-state="collapse">
+                <div class="accordion-body"> <section>
+
+                <section>
+                    <p style="color:red;">200</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">400</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">401</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">403</p>
+                </section>
+             </section>
+        </div>
+            </div>
+                </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="regUser">
+                    <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                        aria-expanded="false" aria-controls="flush-collapseOne"
+                        style="background-color: #F47174;">
+                        <b>Register new user</b> (POST /register)
+                    </button>
+            </h2>
+        <div class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample" data-state="collapse">
+                <div class="accordion-body"> <section>
+
+                <section>
+                    <p style="color:red;">200</p>
+                </section>
+
+                <section>
+                    <p style="color:green;">400</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">401</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">403</p>
+                </section>
+             </section>
+        </div>
+            </div>
+                </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="storeAdd">
+                    <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                        aria-expanded="false" aria-controls="flush-collapseOne"
+                        style="background-color: #60d891;">
+                        <b>Add new store</b> (POST /store/{nameStore})
+                    </button>
+            </h2>
+        <div class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample" data-state="collapse">
+                <div class="accordion-body"> <section>
+
+                <section>
+                    <p style="color:green;">201</p>
+                </section>
+
+                <section>
+                    <p style="color:green;">400</p>
+                </section>
+
+                <section>
+                    <p style="color:green;">401</p>
+                </section>
+             </section>
+        </div>
+            </div>
+                </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="storeGet">
+                    <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                        aria-expanded="false" aria-controls="flush-collapseOne"
+                        style="background-color: #60d891;">
+                        <b>Get stores</b> (GET /store/{nameStore})
+                    </button>
+            </h2>
+        <div class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample" data-state="collapse">
+                <div class="accordion-body"> <section>
+
+                <section>
+                    <p style="color:green;">200</p>
+                </section>
+
+                <section>
+                    <p style="color:green;">401</p>
+                </section>
+             </section>
+        </div>
+            </div>
+                </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="userInfoAdd">
+                    <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                        aria-expanded="false" aria-controls="flush-collapseOne"
+                        style="background-color: #F47174;">
+                        <b>Add user info</b> (POST /user_info/{userId})
+                    </button>
+            </h2>
+        <div class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample" data-state="collapse">
+                <div class="accordion-body"> <section>
+
+                <section>
+                    <p style="color:red;">200</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">400</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">401</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">403</p>
+                </section>
+             </section>
+        </div>
+            </div>
+                </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="userInfoDelete">
+                    <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                        aria-expanded="false" aria-controls="flush-collapseOne"
+                        style="background-color: #F47174;">
+                        <b>Delete user info</b> (DELETE /user_info/{userId})
+                    </button>
+            </h2>
+        <div class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample" data-state="collapse">
+                <div class="accordion-body"> <section>
+
+                <section>
+                    <p style="color:red;">200</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">400</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">401</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">403</p>
+                </section>
+             </section>
+        </div>
+            </div>
+                </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="userInfoGet">
+                    <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                        aria-expanded="false" aria-controls="flush-collapseOne"
+                        style="background-color: #F47174;">
+                        <b>Get user info</b> (GET /user_info/{userId})
+                    </button>
+            </h2>
+        <div class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample" data-state="collapse">
+                <div class="accordion-body"> <section>
+
+                <section>
+                    <p style="color:red;">200</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">400</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">401</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">403</p>
+                </section>
+             </section>
+        </div>
+            </div>
+                </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="userInfoUpdate">
+                    <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                        aria-expanded="false" aria-controls="flush-collapseOne"
+                        style="background-color: #F47174;">
+                        <b>Update user info</b> (PUT /user_info/{userId})
+                    </button>
+            </h2>
+        <div class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample" data-state="collapse">
+                <div class="accordion-body"> <section>
+
+                <section>
+                    <p style="color:red;">200</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">400</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">401</p>
+                </section>
+
+                <section>
+                    <p style="color:red;">403</p>
+                </section>
+             </section>
+        </div>
+            </div>
+                </div>
+
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="endpoint">
+                    <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                        aria-expanded="false" aria-controls="flush-collapseOne"
+                        style="background-color: #F56b02;">
+                        Missing endpoints
+                    </button>
+            </h2>
+        <div class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample" data-state="collapse">
+                <div class="accordion-body"> <section>
+
+                <textarea class="form-control" rows="3"></textarea>
+                 </section>
+        </div>
+            </div>
+                </div>
+
+            </div>
+            </div>
+        </div>
+
+                    </body>
+                    <script src="./src/script.js"></script>
+        </html>
