@@ -1,9 +1,9 @@
 import logging
 
 import pytest
+from swagger_coverage.coverage import Swagger
+from swagger_coverage.report import ReportHtml
 
-from common.report_html import ReportHtml
-from common.swagger import Swagger
 from fixtures.app import StoreApp
 from fixtures.common_models import UserStore
 from fixtures.register.model import RegisterUser

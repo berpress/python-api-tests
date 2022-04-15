@@ -1,8 +1,9 @@
 from requests import Response
+from swagger_coverage.deco import swagger
 
 from fixtures.register.model import RegisterUser, RegisterUserResponse
 from fixtures.validator import Validator
-from common.deco import logging as log, swagger
+from common.deco import logging as log
 
 
 class Register(Validator):
