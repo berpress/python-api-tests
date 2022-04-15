@@ -1,8 +1,9 @@
 from requests import Response
+from swagger_coverage.deco import swagger
 
 from fixtures.store.model import StoreResponse
 from fixtures.validator import Validator
-from common.deco import logging as log, swagger
+from common.deco import logging as log
 
 
 class Store(Validator):

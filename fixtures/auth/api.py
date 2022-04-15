@@ -1,8 +1,9 @@
 from requests import Response
+from swagger_coverage.deco import swagger
 
 from fixtures.auth.model import AuthResponse, Auth
 from fixtures.validator import Validator
-from common.deco import logging as log, swagger
+from common.deco import logging as log
 
 
 class AuthUser(Validator):

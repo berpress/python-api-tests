@@ -1,9 +1,9 @@
 import logging
 
 import pytest
+from swagger_coverage.coverage import Swagger
+from swagger_coverage.report import ReportHtml
 
-from common.report_html import ReportHtml
-from common.swagger import Swagger
 from fixtures.app import StoreApp
 from fixtures.common_models import UserStore
 from fixtures.register.model import RegisterUser
@@ -85,7 +85,7 @@ def pytest_addoption(parser):
     ),
 
 
-@pytest.fixture(scope="session")
+@pytest.fixture(scope="session", autouse=True)
 def swagger_checker(request):
     url = request.config.getoption("--swagger-url")
     url_api = request.config.getoption("--api-url")
