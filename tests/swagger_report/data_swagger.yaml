@@ -1,0 +1,150 @@
+authUser:
+  description: null
+  method: POST
+  path: /auth
+  statuses:
+  - 200
+  - 400
+  - 401
+  - 403
+  tag: auth
+balanceAdd:
+  description: null
+  method: POST
+  path: /balance/{userId}
+  statuses:
+  - 200
+  - 400
+  - 401
+  - 403
+  tag: userBalance
+balanceGet:
+  description: null
+  method: GET
+  path: /balance/{userId}
+  statuses:
+  - 200
+  - 400
+  - 401
+  - 403
+  tag: userBalance
+itemAdd:
+  description: null
+  method: POST
+  path: /item/{nameItem}
+  statuses:
+  - 200
+  - 400
+  - 401
+  - 403
+  tag: storeItem
+itemChange:
+  description: null
+  method: PUT
+  path: /item/{nameItem}
+  statuses:
+  - 200
+  - 400
+  - 401
+  - 403
+  tag: storeItem
+itemGet:
+  description: null
+  method: GET
+  path: /item/{nameItem}
+  statuses:
+  - 200
+  - 400
+  - 401
+  - 403
+  tag: storeItem
+itemsGet:
+  description: null
+  method: GET
+  path: /items
+  statuses:
+  - 200
+  - 400
+  - 401
+  - 403
+  tag: storeItems
+pay:
+  description: null
+  method: POST
+  path: /pay/{userId}
+  statuses:
+  - 200
+  - 400
+  - 401
+  - 403
+  tag: pay
+regUser:
+  description: null
+  method: POST
+  path: /register
+  statuses:
+  - 200
+  - 400
+  - 401
+  - 403
+  tag: register
+storeAdd:
+  description: null
+  method: POST
+  path: /store/{nameStore}
+  statuses:
+  - 200
+  - 400
+  - 401
+  - 403
+  tag: storeMagazine
+storeGet:
+  description: null
+  method: GET
+  path: /store/{nameStore}
+  statuses:
+  - 200
+  - 400
+  - 401
+  - 403
+  tag: storeMagazine
+userInfoAdd:
+  description: null
+  method: POST
+  path: /user_info/{userId}
+  statuses:
+  - 200
+  - 400
+  - 401
+  - 403
+  tag: userInfo
+userInfoDelete:
+  description: null
+  method: DELETE
+  path: /user_info/{userId}
+  statuses:
+  - 200
+  - 400
+  - 401
+  - 403
+  tag: userInfo
+userInfoGet:
+  description: null
+  method: GET
+  path: /user_info/{userId}
+  statuses:
+  - 200
+  - 400
+  - 401
+  - 403
+  tag: userInfo
+userInfoUpdate:
+  description: null
+  method: PUT
+  path: /user_info/{userId}
+  statuses:
+  - 200
+  - 400
+  - 401
+  - 403
+  tag: userInfo
