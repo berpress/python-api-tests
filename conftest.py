@@ -1,8 +1,8 @@
 import logging
 
 import pytest
-from swagger_coverage.coverage import Swagger
-from swagger_coverage.report import ReportHtml
+from swagger_coverage.coverage import SwaggerCoverage
+from common.api_builder import ApiBuilder
 
 from fixtures.app import StoreApp
 from fixtures.common_models import UserStore
@@ -14,7 +14,7 @@ logger = logging.getLogger("api")
 
 
 @pytest.fixture(scope="session")
-def app(request, swagger_checker):
+def app(request):
     url = request.config.getoption("--api-url")
     logger.info(f"Start api tests, url is {url}")
     return StoreApp(url)
@@ -75,7 +75,7 @@ def pytest_addoption(parser):
         "--api-url",
         action="store",
         help="enter api url",
-        default="https://stores-tests-api.herokuapp.com/",
+        default="https://stores-tests-api.herokuapp.com",
     ),
     parser.addoption(
         "--swagger-url",
@@ -89,8 +89,17 @@ def pytest_addoption(parser):
 def swagger_checker(request):
     url = request.config.getoption("--swagger-url")
     url_api = request.config.getoption("--api-url")
-    swagger = Swagger(url)
+    path = "/report"
+    swagger = SwaggerCoverage(api_url=url_api, url=url, path=path)
     swagger.create_coverage_data()
     yield
-    report = ReportHtml(api_url=url_api, swagger_url=url, data=swagger.result())
-    report.save_html()
+    swagger.create_report()
+
+
+@pytest.fixture
+def user_info_builder(app):
+    app_builder = ApiBuilder(app)
+    user = (
+        app_builder.authentication.register().auth().user_info.add_user_info().build()
+    )
+    return user
