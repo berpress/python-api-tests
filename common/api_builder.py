@@ -50,7 +50,7 @@ class AuthBuilder(ApiBuilder):
 
     def auth(self):
         """
-        Register random user
+        Auth user
         """
         res = self.store.app.auth.login(
             data=self.store.auth, type_response=AuthResponse
@@ -66,6 +66,9 @@ class UserInfoBuilder(ApiBuilder):
         super().__init__(store.app, store)
 
     def add_user_info(self):
+        """
+        Add user info
+        """
         data = AddUserInfo.random()
         self.store.app.user_info.add_user_info(
             uuid=self.store.user_uuid, data=data, header=self.store.header
