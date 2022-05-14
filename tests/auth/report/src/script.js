@@ -3,8 +3,7 @@ const app = () => {
     all: [],
     success: [],
     failed: [],
-    notAdd: [],
-    search: [],
+    notAdd: []
   };
 
   const accordions = document.querySelectorAll('.accordion-item');
@@ -13,8 +12,6 @@ const app = () => {
   const failedButton = document.querySelector('#not-checked');
   const notAddButton = document.querySelector('#not-added');
   const accordionsDiv = document.querySelector('#accordions');
-  const searchButton = document.querySelector('#search-button');
-  const searchInput = document.querySelector('#search');
 
 
   state.all = accordions;
@@ -28,16 +25,16 @@ const app = () => {
   }
 
   state.success = Array.from(accordions).filter((item) => {
-    return findStatusElement(item, '#d6facf')
+    return findStatusElement(item, '#60d891')
   })
 
 
   state.failed = Array.from(accordions).filter((item) => {
-    return findStatusElement(item, '#f59993')
+    return findStatusElement(item, '#F47174')
   })
 
   state.notAdd= Array.from(accordions).filter((item) => {
-    return findStatusElement(item, '#f2b85a')
+    return findStatusElement(item, '#F56b02')
   })
 
   const showBtnHandler = (event) => {
@@ -57,31 +54,12 @@ const app = () => {
     Array.from(items).forEach(element => accordionsDiv.appendChild(element));
   }
 
-  state.success = Array.from(accordions).filter((item) => {
-    return findStatusElement(item, '#d6facf')
-  })
-
-
-  const searchItems = (events, items) => {
-    events.preventDefault();
-    Array.from(items).forEach(element => {
-      if(element.innerText.indexOf(searchInput.value) !== -1)
-        {
-          state.search.push(element);
-          showItems(state.search);
-          return true;
-        }
-    });
-  }
-
   allButton.addEventListener('click', () => { showItems(state.all);});
   successButton.addEventListener('click', () => { showItems(state.success);});
   failedButton.addEventListener('click', () => { showItems(state.failed);});
   notAddButton.addEventListener('click', () => { showItems(state.notAdd);});
   const accordionArray = Array.from(document.getElementsByClassName('accordion-button'));
   accordionArray.forEach(el => el.addEventListener('click', showBtnHandler));
-  searchButton.addEventListener('click', (e) => { searchItems(e, state.all);});
-  searchInput.addEventListener('click', () => { showItems(state.all);});
 }
 
 app();

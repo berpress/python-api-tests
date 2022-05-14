@@ -1,7 +1,8 @@
 import logging
 
 import pytest
-from swagger_coverage.coverage import SwaggerCoverage
+from swagger_coverage.src.coverage import SwaggerCoverage
+
 from common.api_builder import ApiBuilder
 
 from fixtures.app import StoreApp

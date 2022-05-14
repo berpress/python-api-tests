@@ -4,7 +4,9 @@ authUser:
   path: /auth
   statuses:
   - 200
+  - 400
   - 401
+  - 403
   tag: auth
 balanceAdd:
   description: null

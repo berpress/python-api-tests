@@ -6,33 +6,26 @@
                 </head>
                     <body>
 
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Report created at 2022-05-14 21:28:07</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                    <form class="d-flex">
-                        <input id="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button id="search-button" class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </div>
-            </nav>
+        <nav class="navbar navbar-dark bg-dark mb-4">
+            <div class="container-md">
+                <a class="navbar-brand" href="#">Swagger coverage</a>
+            </div>
+        </nav>
         <p class="text-center"">API url: <a href=https://stores-tests-api.herokuapp.com>https://stores-tests-api.herokuapp.com</a></p><p class="text-center"">Swagger url: <a href=https://api.swaggerhub.com/apis/berpress/flask-rest-api/1.0.0>https://api.swaggerhub.com/apis/berpress/flask-rest-api/1.0.0</a></p>
         <div class="container px-5">
             <div class="row gx-0">
-            <div class="d-flex justify-content-center"><div class="btn-group" role="group" aria-label="Basic mixed styles example"><button type="button" id="all", class="btn btn-primary">All <span class="badge bg-secondary">58</span></button><button type="button" id="success", class="btn btn-success">Checked <span class="badge bg-secondary">6</span></button><button type="button" id="not-checked", class="btn btn-danger">Not checked <span class="badge bg-secondary">52</span></button><button type="button" id="not-added", class="btn btn-warning">Not added <span class="badge bg-secondary">0</span></button></div></div>
+            <div class="d-flex justify-content-center"><div class="btn-group" role="group" aria-label="Basic mixed styles example"><button type="button" id="all", class="btn btn-primary">All <span class="badge bg-secondary">60</span></button><button type="button" id="success", class="btn btn-success">Checked <span class="badge bg-secondary">0</span></button><button type="button" id="not-checked", class="btn btn-danger">Not checked <span class="badge bg-secondary">60</span></button><button type="button" id="not-added", class="btn btn-warning">Not added <span class="badge bg-secondary">0</span></button></div></div>
 
             <div class="container px-4 py-1">
                 <div class="row gx-5">
                     <div class="progress gx-0">
 
             <div class="progress-bar bg-success px-5"
-                role="progressbar" style="width: 10.3%" aria-valuenow=20 aria-valuemin="0" aria-valuemax="100">10.3%
+                role="progressbar" style="width: 0.0%" aria-valuenow=20 aria-valuemin="0" aria-valuemax="100">0.0%
             </div>
 
             <div class="progress-bar bg-danger px-5"
-                role="progressbar" style="width: 89.7%" aria-valuenow=20 aria-valuemin="0" aria-valuemax="100">89.7%
+                role="progressbar" style="width: 100.0%" aria-valuenow=20 aria-valuemin="0" aria-valuemax="100">100.0%
             </div>
 
                     </div>
@@ -45,7 +38,7 @@
                     <button class="accordion-button collapsed" type="button"
                         data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
                         aria-expanded="false" aria-controls="flush-collapseOne"
-                        style="background-color: #d6facf;">
+                        style="background-color: #F47174;">
                         <b>Auth User</b> (POST /auth)
                     </button>
             </h2>
@@ -53,7 +46,7 @@
             data-bs-parent="#accordionFlushExample" data-state="collapse">
                 <div class="accordion-body">
                     <section>
-                        Description: -
+                        Description: None
                          <table class="table">
                       <thead>
                         <tr>
@@ -65,15 +58,29 @@
                       <tbody>
                         <tr>
                           <th scope="row">1</th>
-                          <td><p style="color:green;">200</p></td>
-                          <td>20</td>
+                          <td><p style="color:red;">200</p></td>
+                          <td>0</td>
                         </tr>
                       </tbody>
                       <tbody>
                         <tr>
                           <th scope="row">2</th>
-                          <td><p style="color:green;">401</p></td>
-                          <td>1</td>
+                          <td><p style="color:red;">400</p></td>
+                          <td>0</td>
+                        </tr>
+                      </tbody>
+                      <tbody>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td><p style="color:red;">401</p></td>
+                          <td>0</td>
+                        </tr>
+                      </tbody>
+                      <tbody>
+                        <tr>
+                          <th scope="row">4</th>
+                          <td><p style="color:red;">403</p></td>
+                          <td>0</td>
                         </tr>
                       </tbody>
 
@@ -89,7 +96,7 @@
                     <button class="accordion-button collapsed" type="button"
                         data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
                         aria-expanded="false" aria-controls="flush-collapseOne"
-                        style="background-color: #f59993;">
+                        style="background-color: #F47174;">
                         <b>Balance Add</b> (POST /balance/{userId})
                     </button>
             </h2>
@@ -97,7 +104,7 @@
             data-bs-parent="#accordionFlushExample" data-state="collapse">
                 <div class="accordion-body">
                     <section>
-                        Description: -
+                        Description: None
                          <table class="table">
                       <thead>
                         <tr>
@@ -147,7 +154,7 @@
                     <button class="accordion-button collapsed" type="button"
                         data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
                         aria-expanded="false" aria-controls="flush-collapseOne"
-                        style="background-color: #f59993;">
+                        style="background-color: #F47174;">
                         <b>Balance Get</b> (GET /balance/{userId})
                     </button>
             </h2>
@@ -155,7 +162,7 @@
             data-bs-parent="#accordionFlushExample" data-state="collapse">
                 <div class="accordion-body">
                     <section>
-                        Description: -
+                        Description: None
                          <table class="table">
                       <thead>
                         <tr>
@@ -205,7 +212,7 @@
                     <button class="accordion-button collapsed" type="button"
                         data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
                         aria-expanded="false" aria-controls="flush-collapseOne"
-                        style="background-color: #f59993;">
+                        style="background-color: #F47174;">
                         <b>Item Add</b> (POST /item/{nameItem})
                     </button>
             </h2>
@@ -213,7 +220,7 @@
             data-bs-parent="#accordionFlushExample" data-state="collapse">
                 <div class="accordion-body">
                     <section>
-                        Description: -
+                        Description: None
                          <table class="table">
                       <thead>
                         <tr>
@@ -263,7 +270,7 @@
                     <button class="accordion-button collapsed" type="button"
                         data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
                         aria-expanded="false" aria-controls="flush-collapseOne"
-                        style="background-color: #f59993;">
+                        style="background-color: #F47174;">
                         <b>Item Change</b> (PUT /item/{nameItem})
                     </button>
             </h2>
@@ -271,7 +278,7 @@
             data-bs-parent="#accordionFlushExample" data-state="collapse">
                 <div class="accordion-body">
                     <section>
-                        Description: -
+                        Description: None
                          <table class="table">
                       <thead>
                         <tr>
@@ -321,7 +328,7 @@
                     <button class="accordion-button collapsed" type="button"
                         data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
                         aria-expanded="false" aria-controls="flush-collapseOne"
-                        style="background-color: #f59993;">
+                        style="background-color: #F47174;">
                         <b>Item Get</b> (GET /item/{nameItem})
                     </button>
             </h2>
@@ -329,7 +336,7 @@
             data-bs-parent="#accordionFlushExample" data-state="collapse">
                 <div class="accordion-body">
                     <section>
-                        Description: -
+                        Description: None
                          <table class="table">
                       <thead>
                         <tr>
@@ -379,7 +386,7 @@
                     <button class="accordion-button collapsed" type="button"
                         data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
                         aria-expanded="false" aria-controls="flush-collapseOne"
-                        style="background-color: #f59993;">
+                        style="background-color: #F47174;">
                         <b>Items Get</b> (GET /items)
                     </button>
             </h2>
@@ -387,7 +394,7 @@
             data-bs-parent="#accordionFlushExample" data-state="collapse">
                 <div class="accordion-body">
                     <section>
-                        Description: -
+                        Description: None
                          <table class="table">
                       <thead>
                         <tr>
@@ -437,7 +444,7 @@
                     <button class="accordion-button collapsed" type="button"
                         data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
                         aria-expanded="false" aria-controls="flush-collapseOne"
-                        style="background-color: #f59993;">
+                        style="background-color: #F47174;">
                         <b>Pay</b> (POST /pay/{userId})
                     </button>
             </h2>
@@ -445,7 +452,7 @@
             data-bs-parent="#accordionFlushExample" data-state="collapse">
                 <div class="accordion-body">
                     <section>
-                        Description: -
+                        Description: None
                          <table class="table">
                       <thead>
                         <tr>
@@ -495,7 +502,7 @@
                     <button class="accordion-button collapsed" type="button"
                         data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
                         aria-expanded="false" aria-controls="flush-collapseOne"
-                        style="background-color: #f59993;">
+                        style="background-color: #F47174;">
                         <b>Reg User</b> (POST /register)
                     </button>
             </h2>
@@ -503,7 +510,7 @@
             data-bs-parent="#accordionFlushExample" data-state="collapse">
                 <div class="accordion-body">
                     <section>
-                        Description: -
+                        Description: None
                          <table class="table">
                       <thead>
                         <tr>
@@ -522,8 +529,8 @@
                       <tbody>
                         <tr>
                           <th scope="row">2</th>
-                          <td><p style="color:green;">400</p></td>
-                          <td>2</td>
+                          <td><p style="color:red;">400</p></td>
+                          <td>0</td>
                         </tr>
                       </tbody>
                       <tbody>
@@ -553,7 +560,7 @@
                     <button class="accordion-button collapsed" type="button"
                         data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
                         aria-expanded="false" aria-controls="flush-collapseOne"
-                        style="background-color: #f59993;">
+                        style="background-color: #F47174;">
                         <b>Store Add</b> (POST /store/{nameStore})
                     </button>
             </h2>
@@ -561,7 +568,7 @@
             data-bs-parent="#accordionFlushExample" data-state="collapse">
                 <div class="accordion-body">
                     <section>
-                        Description: -
+                        Description: None
                          <table class="table">
                       <thead>
                         <tr>
@@ -587,8 +594,8 @@
                       <tbody>
                         <tr>
                           <th scope="row">3</th>
-                          <td><p style="color:green;">401</p></td>
-                          <td>1</td>
+                          <td><p style="color:red;">401</p></td>
+                          <td>0</td>
                         </tr>
                       </tbody>
                       <tbody>
@@ -611,7 +618,7 @@
                     <button class="accordion-button collapsed" type="button"
                         data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
                         aria-expanded="false" aria-controls="flush-collapseOne"
-                        style="background-color: #f59993;">
+                        style="background-color: #F47174;">
                         <b>Store Get</b> (GET /store/{nameStore})
                     </button>
             </h2>
@@ -619,7 +626,7 @@
             data-bs-parent="#accordionFlushExample" data-state="collapse">
                 <div class="accordion-body">
                     <section>
-                        Description: -
+                        Description: None
                          <table class="table">
                       <thead>
                         <tr>
@@ -631,8 +638,8 @@
                       <tbody>
                         <tr>
                           <th scope="row">1</th>
-                          <td><p style="color:green;">200</p></td>
-                          <td>1</td>
+                          <td><p style="color:red;">200</p></td>
+                          <td>0</td>
                         </tr>
                       </tbody>
                       <tbody>
@@ -645,8 +652,8 @@
                       <tbody>
                         <tr>
                           <th scope="row">3</th>
-                          <td><p style="color:green;">401</p></td>
-                          <td>1</td>
+                          <td><p style="color:red;">401</p></td>
+                          <td>0</td>
                         </tr>
                       </tbody>
                       <tbody>
@@ -669,7 +676,7 @@
                     <button class="accordion-button collapsed" type="button"
                         data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
                         aria-expanded="false" aria-controls="flush-collapseOne"
-                        style="background-color: #f59993;">
+                        style="background-color: #F47174;">
                         <b>User Info Add</b> (POST /user_info/{userId})
                     </button>
             </h2>
@@ -677,7 +684,7 @@
             data-bs-parent="#accordionFlushExample" data-state="collapse">
                 <div class="accordion-body">
                     <section>
-                        Description: -
+                        Description: None
                          <table class="table">
                       <thead>
                         <tr>
@@ -727,7 +734,7 @@
                     <button class="accordion-button collapsed" type="button"
                         data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
                         aria-expanded="false" aria-controls="flush-collapseOne"
-                        style="background-color: #f59993;">
+                        style="background-color: #F47174;">
                         <b>User Info Delete</b> (DELETE /user_info/{userId})
                     </button>
             </h2>
@@ -735,7 +742,7 @@
             data-bs-parent="#accordionFlushExample" data-state="collapse">
                 <div class="accordion-body">
                     <section>
-                        Description: -
+                        Description: None
                          <table class="table">
                       <thead>
                         <tr>
@@ -785,7 +792,7 @@
                     <button class="accordion-button collapsed" type="button"
                         data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
                         aria-expanded="false" aria-controls="flush-collapseOne"
-                        style="background-color: #f59993;">
+                        style="background-color: #F47174;">
                         <b>User Info Get</b> (GET /user_info/{userId})
                     </button>
             </h2>
@@ -793,7 +800,7 @@
             data-bs-parent="#accordionFlushExample" data-state="collapse">
                 <div class="accordion-body">
                     <section>
-                        Description: -
+                        Description: None
                          <table class="table">
                       <thead>
                         <tr>
@@ -843,7 +850,7 @@
                     <button class="accordion-button collapsed" type="button"
                         data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
                         aria-expanded="false" aria-controls="flush-collapseOne"
-                        style="background-color: #f59993;">
+                        style="background-color: #F47174;">
                         <b>User Info Update</b> (PUT /user_info/{userId})
                     </button>
             </h2>
@@ -851,7 +858,7 @@
             data-bs-parent="#accordionFlushExample" data-state="collapse">
                 <div class="accordion-body">
                     <section>
-                        Description: -
+                        Description: None
                          <table class="table">
                       <thead>
                         <tr>
@@ -902,7 +909,7 @@
                     <button class="accordion-button collapsed" type="button"
                         data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
                         aria-expanded="false" aria-controls="flush-collapseOne"
-                        style="background-color: #f2b85a;">
+                        style="background-color: #F56b02;">
                         Missing endpoints
                     </button>
             </h2>

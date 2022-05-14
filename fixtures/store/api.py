@@ -1,5 +1,5 @@
 from requests import Response
-from swagger_coverage.deco import swagger
+from swagger_coverage.src.deco import swagger
 
 from fixtures.store.model import StoreResponse
 from fixtures.validator import Validator
