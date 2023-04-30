@@ -136,13 +136,4 @@ userInfoGet:
   - 401
   - 403
   tag: userInfo
-userInfoUpdate:
-  description: null
-  method: PUT
-  path: /user_info/{userId}
-  statuses:
-  - 200
-  - 400
-  - 401
-  - 403
-  tag: userInfo
+

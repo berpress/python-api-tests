@@ -76,7 +76,7 @@ def pytest_addoption(parser):
         "--api-url",
         action="store",
         help="enter api url",
-        default="https://stores-tests-api.herokuapp.com",
+        default="http://localhost:56733",
     ),
     parser.addoption(
         "--swagger-url",
@@ -90,8 +90,7 @@ def pytest_addoption(parser):
 def swagger_checker(request):
     url = request.config.getoption("--swagger-url")
     url_api = request.config.getoption("--api-url")
-    path = "/report"
-    swagger = SwaggerCoverage(api_url=url_api, url=url, path=path)
+    swagger = SwaggerCoverage(api_url=url_api, url=url)
     swagger.create_coverage_data()
     yield
     swagger.create_report()
